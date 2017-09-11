@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/mvofreire/node-rest-api/issues"
   },
-  "homepage": "https://github.com/mvofreire/node-rest-api#readme"
+  "homepage": "https://github.com/mvofreire/node-rest-api#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.5.6"
+  }
 }
