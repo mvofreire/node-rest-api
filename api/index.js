@@ -1,34 +1,23 @@
 
-const Koa = require('koa')
-const configDb = require('app/config/db.config')
 
-const iniciateDb = () =>{
-    console.log(configDb);
-}
-
-const registerModels = () =>{
-
-}
-
-const registerRoutes = () =>{
-    
-}
+import DbConnection from './db'
+import ApiRoutes from './routes'
 
 const ApiRest = {
-    init(){
+    init() {
+        const configServer = require('app/config/server.config')
+        const Koa = require('koa')
         const app = new Koa();
 
         //init db connection
-        iniciateDb()
-        
-        //register models
-        //registerModels()
+        DbConnection.init()
 
         //register routes
-        registerRoutes()
+        app.use(ApiRoutes.registerRoutes())
 
-        console.log('server listenig on port localhost:4000');
-        app.listen(4000);
+        console.log(`server listenig on port localhost:${configServer.port}`);
+        app.listen(configServer.port);
     }
 }
+
 module.exports = ApiRest

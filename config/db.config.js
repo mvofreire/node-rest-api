@@ -1,8 +1,19 @@
-export default {
-    "db":
-    {
-        connection:"",
-        username:"",
-        password:""
+module.exports = {
+    database:'leitura_educativa',
+    username:'root',
+    password:'',
+
+    options:{
+        host: 'localhost',
+        dialect: 'mysql',
+      
+        pool: {
+          max: 5,
+          min: 0,
+          idle: 10000
+        },
+      
+        // SQLite only
+        //storage: 'path/to/database.sqlite'
     }
 }

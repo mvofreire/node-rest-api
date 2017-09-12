@@ -1,8 +1,36 @@
 import Controller from 'app/api/controller'
+import User from 'app/models/User'
 
-class UserController extends Controller
-{
-    model = "app/models/User";
+class UserController extends Controller {
+
+    constructor(route) {
+        super(route, User)
+    }
+
+    get$users = (ctx) => {
+        ctx.body = 'teste'
+        User.findOne({ name: 'teste' }).then(user => {
+            console.log(user);
+        }, err => {
+            console.log('erro', err);
+        })
+    }
+
+    post$user = (ctx) => {
+        const user = ctx.request.body
+        console.log(user);
+        User.create(user).then(r => {
+            ctx.body = r
+        })
+    }
+
+    put$user = (ctx) => {
+        ctx.body = 'Hello World put User';
+    }
+
+    delete$user = (ctx) => {
+        ctx.body = 'Hello World Delete User';
+    }
 }
 
-export default ('user', UserController)
+export default UserController
