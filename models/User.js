@@ -1,4 +1,4 @@
-import Model from 'app/api/model'
+import Model from 'webhd-node-api-rest/dist/model'
 import Sequelize from 'sequelize'
 
 const User = {

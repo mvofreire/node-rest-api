@@ -36,6 +36,7 @@
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.8.3"
+    "sequelize": "^4.8.3",
+    "webhd-node-api-rest": "file:///C:\\ProjetosPrivados\\webhd-node-api-rest"
   }
 }

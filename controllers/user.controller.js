@@ -1,9 +1,9 @@
-import Controller from 'app/api/controller'
+import Controller from 'webhd-node-api-rest/dist/controller'
 import User from 'app/models/User'
 
 class UserController extends Controller {
 
-    constructor(route) {
+    constructor(route) { 
         super(route, User)
     }
 

@@ -1,3 +1,4 @@
-import api from './api'
+import api from 'webhd-node-api-rest'
+import config from './config/main'
 
-api.init()
+api.init(config)
